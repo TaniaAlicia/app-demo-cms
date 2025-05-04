@@ -4,7 +4,8 @@
   "info": {
     "singularName": "faq-page",
     "pluralName": "faq-pages",
-    "displayName": "FAQ Page"
+    "displayName": "FAQ Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,15 @@
     },
     "body": {
       "type": "blocks"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "buttonPrimary": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "buttons.button"
     }
   }
 }

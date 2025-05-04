@@ -505,6 +505,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiFaqPageFaqPage extends Struct.CollectionTypeSchema {
   collectionName: 'faq_pages';
   info: {
+    description: '';
     displayName: 'FAQ Page';
     pluralName: 'faq-pages';
     singularName: 'faq-page';
@@ -514,6 +515,7 @@ export interface ApiFaqPageFaqPage extends Struct.CollectionTypeSchema {
   };
   attributes: {
     body: Schema.Attribute.Blocks;
+    buttonPrimary: Schema.Attribute.Component<'buttons.button', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -524,6 +526,7 @@ export interface ApiFaqPageFaqPage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
